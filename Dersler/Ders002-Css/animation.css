@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(100, 100, 100);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  /* transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-property: all; */
+  transition: all .5s ease-in-out;
+  .text{
+    opacity: 0;
+    color: yellow;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
+    transition: all .5s ease-in-out;
+  }
+  /* animation-duration: 2s;
+  animation-name: kutuAnimasyon;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; */
+  animation: kutuAnimasyon 2s infinite ease-in-out;
+}
+
+.box:hover{
+  background-color: rgb(76, 76, 228);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  .text{
+    opacity: 1;
+  }
+}
+
+@keyframes kutuAnimasyon {
+  0% {
+    background-color: red; 
+    transform: rotate(0deg);
+  }
+  50% {
+    background-color: yellow; 
+    transform: rotate(180deg);
+  }
+  100% {
+    background-color: red; 
+    transform: rotate(360deg);
+  }
+}
